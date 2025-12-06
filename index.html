@@ -1,19 +1,48 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>My first Form</title>
-        <meta charset="UTF-8">
-        <a href="styles.css" rel="stylesheet" type="text/css">
-    </head>
-    <body>
-        <h1 id="title">Welcome to My Web Page</h1>
-        <p id="description">This is a simple HTML document.</p>
-        <form id="survey-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" <! --required-->>
-            <input type="submit" value="Submit">
-        </form>
-    </body>
+  <head>
+    <title>My first Form</title>
+    <meta charset="UTF-8" />
+    <a href="style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <h1 id="title">Welcome to My Web Page</h1>
+    <p id="description">FeedBack Form.</p>
+    <form id="survey-form">
+      <label id="hame-label" for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name"/>
+      <label id="emal-label" for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email"/>
+      <label id="number-label" for="number">Number:</label>
+      <input type="number" id="number" name="number" min="3" max="15" placeholder="Enter your number"/>
+
+      <label for="dropdown">Subject</label>
+      <select id="dropdown" name="dropdown">
+        <option value="option1">Technical Support</option>
+        <option value="option2">Feed Back</option>
+        <option value="option3">Other</option>
+      </select>
+
+      <p>Rate our Website</p>
+      <label for="great">Great</label>
+      <input type="radio" id="great" name="rate" value="great">
+      <label for="average">Average</label>
+      <input type="radio" id="average" name="rate" value="average"/>
+      <label for="average">Terrible</label>
+      <input type="radio" id="terrible" name="rate" value="terrible"/>
+
+      <p>What did you like?</p>
+      <label for="news">News</label>
+      <input type="checkbox" id="news" name="sections" value="news"/>
+      <label for="comments">Articles</label>
+      <input type="checkbox" id="comments" name="sections" value="articles"/>
+      <label for="comments">Gallery</label>
+      <input type="checkbox" id="comments" name="sections" value="gallery"/>
+
+      <label for="comments">Your Comment:</label>
+      <textarea id="comments" name="comments" rows="3" cols="30" placeholder="Enter your comment here"></textarea>
+
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
 </html>
