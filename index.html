@@ -3,18 +3,38 @@
   <head>
     <title>My first Form</title>
     <meta charset="UTF-8" />
-    <a href="style.css" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
     <h1 id="title">Welcome to My Web Page</h1>
     <p id="description">FeedBack Form.</p>
     <form id="survey-form">
       <label id="hame-label" for="name">Name:</label>
-      <input type="text" id="name" name="name" placeholder="Enter your name"/>
-      <label id="emal-label" for="email">Email:</label>
-      <input type="email" id="email" name="email" placeholder="Enter your email"/>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        required
+        placeholder="Enter your name"
+      />
+      <label id="email-label" for="email">Email:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        required
+        placeholder="Enter your email"
+      />
       <label id="number-label" for="number">Number:</label>
-      <input type="number" id="number" name="number" min="3" max="15" placeholder="Enter your number"/>
+      <input
+        type="text"
+        id="number"
+        name="number"
+        pattern="^[0-9]{3,15}$"
+        inputmode="numeric"
+        required
+        placeholder="Enter your number"
+      />
 
       <label for="dropdown">Subject</label>
       <select id="dropdown" name="dropdown">
@@ -25,22 +45,30 @@
 
       <p>Rate our Website</p>
       <label for="great">Great</label>
-      <input type="radio" id="great" name="rate" value="great">
+      <input type="radio" id="great" name="rate" value="great" />
       <label for="average">Average</label>
-      <input type="radio" id="average" name="rate" value="average"/>
+      <input type="radio" id="average" name="rate" value="average" />
       <label for="average">Terrible</label>
-      <input type="radio" id="terrible" name="rate" value="terrible"/>
+      <input type="radio" id="terrible" name="rate" value="terrible" />
 
       <p>What did you like?</p>
       <label for="news">News</label>
-      <input type="checkbox" id="news" name="sections" value="news"/>
+      <input type="checkbox" id="news" name="sections" value="news" />
       <label for="comments">Articles</label>
-      <input type="checkbox" id="comments" name="sections" value="articles"/>
+      <input type="checkbox" id="comments" name="sections" value="articles" />
       <label for="comments">Gallery</label>
-      <input type="checkbox" id="comments" name="sections" value="gallery"/>
+      <input type="checkbox" id="comments" name="sections" value="gallery" />
 
-      <label for="comments">Your Comment:</label>
-      <textarea id="comments" name="comments" rows="3" cols="30" placeholder="Enter your comment here"></textarea>
+      <p>Your Comment:</p>
+      <label for="comments"></label>
+      <textarea
+        id="comments"
+        name="comments"
+        rows="3"
+        cols="30"
+        placeholder="Enter your comment here"
+      ></textarea>
+      <br />
 
       <input type="submit" value="Submit" />
     </form>
